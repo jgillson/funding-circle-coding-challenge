@@ -21,6 +21,15 @@ dependencies {
 
 test {
   useJUnitPlatform {}
+  testLogging.showStandardStreams = true
+
+  beforeTest { descriptor ->
+    logger.lifecycle("Running test: " + descriptor)
+  }
+
+  onOutput { descriptor, event ->
+    logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
+  }
 }
 
 run {

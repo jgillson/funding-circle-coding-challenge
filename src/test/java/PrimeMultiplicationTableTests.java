@@ -19,9 +19,9 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Returns a list of 10 prime numbers when num is 10")
   void testListOfPrimes() {
-    int num = 10;
+    int n = 10;
     List<Integer> expectedListOfPrimeNumbers = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29);
-    List<Integer> actualListOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    List<Integer> actualListOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
 
     assertAll(
       () -> assertThat(actualListOfPrimeNumbers, allOf(is(notNullValue()), is(not(empty())), hasSize(10))),
@@ -32,9 +32,9 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Returns an empty list of prime numbers when num is 0")
   void testEmptyListOfPrimes() {
-    int num = 0;
+    int n = 0;
     List<Integer> expectedListOfPrimeNumbers = Collections.emptyList();
-    List<Integer> actualListOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    List<Integer> actualListOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
 
     assertAll(
       () -> assertThat(actualListOfPrimeNumbers, allOf(is(notNullValue()), is(empty()))),
@@ -77,8 +77,8 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Creates table with expected first row and column when num is 10")
   void testCreateTableFirstRowAndColumnFor10PrimeNumbers() {
-    int num = 10;
-    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    int n = 10;
+    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
     String[][] tableFirstRowAndColumn = PrimeMultiplicationTable.createTableFirstRowAndColumn(listOfPrimeNumbers);
     String[] expectedFirstRow = {"-", "2", "3", "5", "7", "11", "13", "17", "19", "23", "29"};
 
@@ -94,8 +94,8 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Creates table with expected first row and column when num is 20")
   void testCreateTableFirstRowAndColumnFor20PrimeNumbers() {
-    int num = 20;
-    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    int n = 20;
+    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
     String[][] tableFirstRowAndColumn = PrimeMultiplicationTable.createTableFirstRowAndColumn(listOfPrimeNumbers);
     String[] expectedFirstRow = {"-", "2", "3", "5", "7", "11", "13", "17", "19", "23", "29", "31",
       "37", "41", "43", "47", "53", "59", "61", "67", "71"};
@@ -112,8 +112,8 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Creates table with expected first row and column when num is 0")
   void testCreateTableFirstRowAndColumnFor0PrimeNumbers() {
-    int num = 0;
-    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    int n = 0;
+    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
     String[][] tableFirstRowAndColumn = PrimeMultiplicationTable.createTableFirstRowAndColumn(listOfPrimeNumbers);
 
     assertAll(
@@ -126,8 +126,8 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Creates multiplication table with expected first row and column when num is 10")
   void testCreateMultiplicationTableFor10PrimeNumbers() {
-    int num = 10;
-    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    int n = 10;
+    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
     String[][] tableFirstRowAndColumn = PrimeMultiplicationTable.createTableFirstRowAndColumn(listOfPrimeNumbers);
     String[][] multiplicationTable = PrimeMultiplicationTable.createMultiplicationTable(tableFirstRowAndColumn);
     String[] expectedFirstRow = {"2", "4", "6", "10", "14", "22", "26", "34", "38", "46", "58"};
@@ -157,8 +157,8 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Creates multiplication table with expected first row and column when num is 0")
   void testCreateMultiplicationTableFor0PrimeNumbers() {
-    int num = 0;
-    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    int n = 0;
+    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
     String[][] tableFirstRowAndColumn = PrimeMultiplicationTable.createTableFirstRowAndColumn(listOfPrimeNumbers);
     String[][] multiplicationTable = PrimeMultiplicationTable.createMultiplicationTable(tableFirstRowAndColumn);
 
@@ -174,8 +174,8 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Tests the expected multiplication table to be printed when num is 10")
   void testPrintMultiplicationTableFor10PrimeNumbers() {
-    int num = 10;
-    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    int n = 10;
+    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
     String[][] tableFirstRowAndColumn = PrimeMultiplicationTable.createTableFirstRowAndColumn(listOfPrimeNumbers);
     String[][] multiplicationTable = PrimeMultiplicationTable.createMultiplicationTable(tableFirstRowAndColumn);
     String multiplicationTableStr = PrimeMultiplicationTable.printMultiplicationTable(multiplicationTable);
@@ -205,8 +205,8 @@ class PrimeMultiplicationTableTests {
   @Test
   @DisplayName("Tests the expected multiplication table to be printed when num is 0")
   void testPrintMultiplicationTableFor0PrimeNumbers() {
-    int num = 0;
-    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(num);
+    int n = 0;
+    List<Integer> listOfPrimeNumbers = PrimeMultiplicationTable.listOfPrimeNumbers(n);
     String[][] tableFirstRowAndColumn = PrimeMultiplicationTable.createTableFirstRowAndColumn(listOfPrimeNumbers);
     String[][] multiplicationTable = PrimeMultiplicationTable.createMultiplicationTable(tableFirstRowAndColumn);
     String multiplicationTableStr = PrimeMultiplicationTable.printMultiplicationTable(multiplicationTable);
