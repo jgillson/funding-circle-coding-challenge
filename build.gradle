@@ -1,0 +1,30 @@
+plugins {
+  id 'idea'
+  id 'java'
+}
+
+apply from: "$rootDir/gradle/dependencies.gradle"
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+mainClassName = "PrimeMultiplicationTable"
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile libraries.commons_collections
+  compile libraries.hamcrest
+  compile libraries.junit_jupiter
+}
+
+test {
+  useJUnitPlatform {}
+}
+
+run {
+  if (project.hasProperty('args')) {
+    args project.args.split('\\s')
+  }
+}

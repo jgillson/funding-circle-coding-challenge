@@ -1,0 +1,16 @@
+ext {
+  versions = [:]
+  libraries = [:]
+}
+
+versions.commons_collections = '4.3'
+versions.hamcrest = '2.1'
+versions.junit_jupiter = '5.4.1'
+
+libraries.commons_collections = "org.apache.commons:commons-collections4:$versions.commons_collections"
+libraries.hamcrest = "org.hamcrest:hamcrest:$versions.hamcrest"
+libraries.junit_jupiter = [
+  "org.junit.jupiter:junit-jupiter-api:$versions.junit_jupiter",
+  "org.junit.jupiter:junit-jupiter-engine:$versions.junit_jupiter"
+]
+

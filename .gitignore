@@ -21,3 +21,29 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Ignore IDEA files, exceptions to this can be defined in .idea/.gitignore
+.idea
+
+# Misc
+*.iws
+*.ipr
+*.imp
+*.iml
+*~
+.*~
+*.bak
+
+/caches/
+/native/
+/workers/
+/wrapper/
+
+# Ignore build files and folders
+out/
+logs/
+tmp/
+build/
+target/
+modules/
+libraries/

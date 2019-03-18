@@ -1,1 +1,1 @@
-# funding-circle-coding-challenge
+# Funding Circle Coding Challenge
