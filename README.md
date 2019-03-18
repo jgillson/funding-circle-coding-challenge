@@ -1,5 +1,3 @@
-# Funding Circle Coding Challenge
-
 ## Objective
 Write a program that prints out a multiplication table of the first 10 prime numbers.
 * The program must run from the command line and print one table to STDOUT.
@@ -142,7 +140,7 @@ Example (n is 10):
 ### `static String[][] createMultiplicationTable(String[][] table)`
 Creates the prime number multiplication table as a 2D array with the products of `n` prime numbers.
 
-The time complexity of this method is `O(n<sup>2</sup>)` due to the nested for loops to create the prime number multiplication table with each product.
+The time complexity of this method is `O(n^2)` due to the nested for loops to create the prime number multiplication table with each product.
 
 Example (n is 10):
 ```
@@ -162,8 +160,8 @@ Example (n is 10):
 ### `static String printMultiplicationTable(String[][] multiplicationTable)`
 Returns the prime number multiplication table as a String and prints this to the STDOUT.
 
-The time complexity of this method is `O(n<sup>2</sup>)` due to the nested for loops to print the prime number multiplication table.
+The time complexity of this method is `O(n^2)` due to the nested for loops to print the prime number multiplication table.
 
 ## Summary
-To generate the prime number multiplication table results in an overall time complexity of `O(n<sup>2</sup>)`.  
+To generate the prime number multiplication table results in an overall time complexity of `O(n^2)`.  
 Because the entire prime number multiplication table has to be generated, this scales poorly for `n` primes.

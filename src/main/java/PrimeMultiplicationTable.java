@@ -134,7 +134,7 @@ class PrimeMultiplicationTable {
   /**
    * Creates the prime number multiplication table as a 2D array with the products of `n` prime numbers.
    *
-   * The time complexity of this method is `O(n<sup>2</sup>)` due to the nested for loops to create the
+   * The time complexity of this method is `O(n^2)` due to the nested for loops to create the
    * prime number multiplication table with each product.
    *
    * Example:
@@ -166,7 +166,7 @@ class PrimeMultiplicationTable {
   /**
    * Returns the prime number multiplication table as a String and prints this to the STDOUT.
    *
-   * The time complexity of this method is `O(n<sup>2</sup>)` due to the nested for loops to
+   * The time complexity of this method is `O(n^2)` due to the nested for loops to
    * print the prime number multiplication table.
    *
    * @param multiplicationTable the prime number multiplication table
