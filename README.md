@@ -64,6 +64,18 @@ $ ./gradlew run -Pargs=5
 11  22  33  55  77  121
 ```
 
+4.  To test negative cases such as changing the number to a negative integer.
+
+Example:
+```
+$ ./gradlew run -Pargs=-1
+
+> Task :run FAILED
+Invalid integer - please enter a positive integer
+
+FAILURE: Build failed with an exception.
+```
+
 ## Testing
 JUnit Jupiter was used as the testing framework.
 To run all the tests from the command line, run `./gradlew clean test`
@@ -89,7 +101,7 @@ Running test: Test testValidPrimes()(PrimeMultiplicationTableTests)
 To view the test reports in .html format, navigate to `build/reports/tests/test/index.html` and open in any browser.
 
 ## Methods
-### `static List<Integer> listOfPrimeNumbers(int num)`
+### `static List<Integer> listOfPrimeNumbers(int n)`
 Returns a List of Integers of the first `n` prime numbers.
 The method returns the List of Integers of `n` prime numbers, adding a number to the list if it's prime.  
 The prime number of 2 is added to the list, and testing starts at index 3. 
